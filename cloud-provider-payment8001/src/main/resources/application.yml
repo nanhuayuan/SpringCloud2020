@@ -31,10 +31,10 @@ eureka:
     service-url:
     #defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ #,http://eureka7003.com:7003/eureka/
-    register-with-eureka: true
+    register-with-eureka: true  #是否将自己注册进eureka服务列表内，默认true
     fetch-registry: true
 
   instance:
-    instance-id: payment8001   #\u81EA\u5B9A\u4E49\u670D\u52A1\u540D\u79F0\u4FE1\u606F
-    prefer-ip-address: true     #\u8BBF\u95EE\u8DEF\u5F84\u53EF\u4EE5\u663E\u793AIP\u5730\u5740
+    instance-id: payment8001   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
 
