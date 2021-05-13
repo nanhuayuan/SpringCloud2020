@@ -9,11 +9,12 @@ spring:
     url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hanchun123
+  #P94 需要的配置
   zipkin:
     base-url: http://localhost:9411
   sleuth:
     sampler:
-      probability: 1
+      probability: 1   #采样率值介于0-1之间,1标识全部采集
 
 eureka:
   client:
@@ -21,6 +22,7 @@ eureka:
     #defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ #,http://eureka7003.com:7003/eureka/
     register-with-eureka: true  #客户端注册进eureka服务列表内
+    #是否从EurekaServer抓取已有的注册信息,单机无所谓,集群必须设置为true配合ribbon使用负载均衡
     fetch-registry: true
 
   instance:
