@@ -13,5 +13,7 @@ spring:
         file-extension: yaml #指定yaml格式的配置
         group: DEV_GROUP
         namespace: d8bf17e0-fb81-4d55-8bee-fea1898aa817
-
+#${prefix}-${spring.profile.active}.${file-extension}
+# ${spring.application.name}-${spring.profile.active}.${file-extension}
+# nacos-config-client-dev.yml
 
